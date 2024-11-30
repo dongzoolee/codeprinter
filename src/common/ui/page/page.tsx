@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 import { Header } from "./header";
+import { Footer } from "./footer";
 
-const Children = styled.div``;
+const Children = styled.div`
+  margin: 2.4rem 0;
+`;
 const _Page = ({
   className,
   children,
@@ -15,6 +18,7 @@ const _Page = ({
       <div className={className}>
         <Header />
         <Children>{children}</Children>
+        <Footer />
       </div>
     </>
   );
