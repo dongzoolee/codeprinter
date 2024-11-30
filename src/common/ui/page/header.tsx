@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import PrinterSvg from "./printer.svg";
-
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -13,25 +11,23 @@ const LogoWrapper = styled.div`
   font-weight: ${({ theme }) => theme.font.weight.bold};
   font-style: italic;
 `;
-const LogoImg = styled.img.attrs({
-  src: PrinterSvg,
-  alt: "printer-icon",
-})`
-  width: 2.8rem;
-`;
 const Nav = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: baseline;
   flex-wrap: wrap;
+
+  gap: 1rem;
+`;
+const Slogan = styled.span`
+  font-size: 1.4rem;
 `;
 const _Header = ({ className }: { className?: string }) => {
   return (
     <header className={className}>
       <Nav>
-        <LogoWrapper>
-          <LogoImg />
-          CodePrinter
-        </LogoWrapper>
+        <LogoWrapper>CodePrinter</LogoWrapper>
+        <Slogan>Print beautiful, prettified code</Slogan>
       </Nav>
     </header>
   );
